@@ -97,7 +97,6 @@ for (int i = 1; i <= height; i++)
     Console.WriteLine();
 }
 
-*/
 
 //Uppgift 8, Randig box
 
@@ -120,6 +119,48 @@ for (int i = 1; i <= height; i++)
             Console.Write("X");
         }
 
+    }
+    Console.WriteLine();
+}
+
+*/
+
+//Uppgift 9, rutig box
+
+Console.WriteLine("Ange höjd:");
+int height = Int32.Parse(Console.ReadLine());
+Console.WriteLine("Ange bredd:");
+int width = Int32.Parse(Console.ReadLine());
+
+
+for (int i = 1; i <= height; i++)
+{
+
+    for (int j = 1; j <= width; j++)
+    {
+        if (i % 2 == 0)
+        {
+            if (j % 2 == 0)
+            {
+                Console.Write("X");
+            }
+            else
+            {
+                Console.Write("O");
+            }
+
+        }
+        else
+        {
+            if (j % 2 == 0)
+            {
+                Console.Write("O");
+            }
+            else
+            {
+                Console.Write("X");
+            }
+        }
     }
     Console.WriteLine();
 }
