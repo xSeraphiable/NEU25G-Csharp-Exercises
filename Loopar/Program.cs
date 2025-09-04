@@ -133,12 +133,12 @@ Console.WriteLine("Ange bredd:");
 int width = Int32.Parse(Console.ReadLine());
 
 
-for (int i = 1; i <= height; i++)
+for (int i = 1; i <= height; i++) //yttre loopen upprepas lika många gånger som höjden
 {
 
-    for (int j = 1; j <= width; j++)
+    for (int j = 1; j <= width; j++) //inre loopen upprepas lika många gånger som bredden
     {
-        if (i % 2 == 0)
+        if (i % 2 == 0) //om raden är jämn
         {
             if (j % 2 == 0)
             {
@@ -150,7 +150,7 @@ for (int i = 1; i <= height; i++)
             }
 
         }
-        else
+        else //om raden är udda
         {
             if (j % 2 == 0)
             {
@@ -162,5 +162,6 @@ for (int i = 1; i <= height; i++)
             }
         }
     }
-    Console.WriteLine();
+
+    Console.WriteLine(); //efter varje rad är klart görs en radbrytning och den inre loopen börjar om tills höjden är uppnådd
 }
