@@ -123,7 +123,6 @@ for (int i = 1; i <= height; i++)
     Console.WriteLine();
 }
 
-*/
 
 //Uppgift 9, rutig box
 
@@ -164,4 +163,39 @@ for (int i = 1; i <= height; i++) //yttre loopen upprepas lika många gånger so
     }
 
     Console.WriteLine(); //efter varje rad är klart görs en radbrytning och den inre loopen börjar om tills höjden är uppnådd
+}
+*/
+
+//Uppgift 10, Ihålig box
+
+Console.WriteLine("Ange höjd:");
+int height = Int32.Parse(Console.ReadLine());
+Console.WriteLine("Ange bredd:");
+int width = Int32.Parse(Console.ReadLine());
+
+for (int i = 1; i <= width; i++)
+{
+    Console.Write("X");
+}
+
+Console.WriteLine();
+
+int count = 0;
+
+while (count < height - 2)
+{
+    Console.Write("X");
+
+    for (int i = 1; i <= width - 2; i++)
+    {
+        Console.Write(" ");
+    }
+
+    Console.WriteLine("X");
+    count++;
+}
+
+for (int i = 1; i <= width; i++)
+{
+    Console.Write("X");
 }
