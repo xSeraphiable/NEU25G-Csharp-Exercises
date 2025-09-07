@@ -309,6 +309,7 @@ string[] list = { "sten", "sax", "påse" };
 int playerWins = 0;
 int computerWins = 0;
 bool keepPlaying = true;
+Random rnd = new Random();
 
 while (keepPlaying)
 {
@@ -321,8 +322,7 @@ while (keepPlaying)
         break;
     }
 
-    Random rnd = new Random();
-    int computerRndChoice = rnd.Next(0, 2);
+    int computerRndChoice = rnd.Next(0, list.Length);
 
     string computerChoice = list[computerRndChoice];
     Console.WriteLine($"Datorn väljer:\n{computerChoice}");
