@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36414.22 d17.14
+VisualStudioVersion = 17.14.36414.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Variables", "NEU25G-Csharp-Exercises\Variables.csproj", "{9CC407F6-E02C-4246-9801-F24490D52F92}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loopar", "Loopar\Loopar.csproj", "{2BAAF3DD-AF47-4533-B8EF-08376637A452}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Indexering", "Indexering\Indexering.csproj", "{FC0BB974-2DAE-4268-80CD-3DC34F2DC5FC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{2BAAF3DD-AF47-4533-B8EF-08376637A452}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2BAAF3DD-AF47-4533-B8EF-08376637A452}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2BAAF3DD-AF47-4533-B8EF-08376637A452}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC0BB974-2DAE-4268-80CD-3DC34F2DC5FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC0BB974-2DAE-4268-80CD-3DC34F2DC5FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC0BB974-2DAE-4268-80CD-3DC34F2DC5FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC0BB974-2DAE-4268-80CD-3DC34F2DC5FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
