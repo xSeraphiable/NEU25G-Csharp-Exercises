@@ -243,32 +243,29 @@ int number = 1;
 
 for (int prints = 0; prints < 20;)
 {
-    int testcounter = 0;
-    int count = 0;
+    int testSuccessCounter = 0;
+    int testCounter = 0;
 
     for (int i = 1; i < number; i++)
     {
-        bool primeTest = false;
-
-        primeTest = number % i != 0;
+        bool primeTest = number % i != 0;
 
         if (primeTest)
         {
-            testcounter++;
+            testSuccessCounter++;
         }
 
-        count++;
+        testCounter++;
     }
 
-    isPrime = testcounter == count-1;
-
-    int prime = number;
-    number++;
+    isPrime = testSuccessCounter == testCounter - 1;
 
     if (isPrime)
     {
-        Console.WriteLine(prime);
+        Console.WriteLine(number);
         prints++;
     }
+
+    number++;
     isPrime = false;
 }
