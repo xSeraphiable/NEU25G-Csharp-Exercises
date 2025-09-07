@@ -241,16 +241,16 @@ for (int i = 1; i <= 9; i++)
 bool isPrime = false;
 int number = 1;
 
-for (int prints = 0; prints < 20;)
+for (int prints = 0; prints < 20;) //kör koden tills 20 tal har skrivits ut
 {
     int testSuccessCounter = 0;
     int testCounter = 0;
 
-    for (int i = 1; i < number; i++)
+    for (int i = 1; i < number; i++) //upprepa loopen en gång mindre än numret som kontrolleras. t.ex. är talet 4 så upprepas loopen 3 gånger.
     {
-        bool primeTest = number % i != 0;
+        bool primeTest = number % i != 0; //om talet har en rest innebär det att det kan vara ett primtal
 
-        if (primeTest)
+        if (primeTest) //räknar hur många gånger beräkningen ovan har lyckats
         {
             testSuccessCounter++;
         }
@@ -258,16 +258,16 @@ for (int prints = 0; prints < 20;)
         testCounter++;
     }
 
-    isPrime = testSuccessCounter == testCounter - 1;
+    isPrime = testSuccessCounter == testCounter - 1; //denna rad kollar om talet hade en rest varje gång (= är ett primtal) eller om det inte hade en rest en eller fler gånger (=ej primtal)
 
-    if (isPrime)
+    if (isPrime) //om det var ett primtal skriv talet ut
     {
         Console.WriteLine(number);
         prints++;
     }
 
-    number++;
-    isPrime = false;
+    number++; //numret ökas med ett och loopen börjar om med beräkning av nästa tal
+    isPrime = false; //reset av isPrime-bool
 }
 */
 
