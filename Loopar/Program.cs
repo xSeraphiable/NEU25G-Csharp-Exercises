@@ -235,9 +235,9 @@ for (int i = 1; i <= 9; i++)
 }
 */
 
-//Uppgift 13
+//Uppgift 13 - Primtal
 
-
+/*
 bool isPrime = false;
 int number = 1;
 
@@ -268,4 +268,35 @@ for (int prints = 0; prints < 20;)
 
     number++;
     isPrime = false;
+}
+*/
+
+//Uppgift 14 - Gissa talet
+
+Random rnd = new Random();
+int number = rnd.Next(1, 100); 
+int guess = 0;
+
+
+while (guess != number)
+{
+    Console.WriteLine("\nGissa det hemliga talet:");
+    guess = Int32.Parse(Console.ReadLine());
+
+    if (guess == number)
+    {
+        Console.WriteLine("\nGrattis! Du gissade rätt.");
+    }
+    else if (guess < number)
+    {
+        Console.WriteLine("Du gissade för lågt. Försök igen.");
+    }
+    else if (guess > number)
+    {
+        Console.WriteLine("Du gissade för högt. Försök igen.");
+    }
+    else
+    {
+        Console.WriteLine("Något gick fel. Försök igen.");
+    }
 }
