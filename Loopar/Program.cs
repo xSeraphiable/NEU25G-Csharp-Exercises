@@ -164,7 +164,6 @@ for (int i = 1; i <= height; i++) //yttre loopen upprepas lika många gånger so
 
     Console.WriteLine(); //efter varje rad är klart görs en radbrytning och den inre loopen börjar om tills höjden är uppnådd
 }
-*/
 
 //Uppgift 10, Ihålig box
 
@@ -198,4 +197,38 @@ while (count < height - 2)
 for (int i = 1; i <= width; i++)
 {
     Console.Write("X");
+}
+
+
+//Uppgift 11, Sifferpyramid
+
+
+Console.WriteLine();
+
+for (int i = 1; i <= 9; i++)
+{
+    for (int j = 1; j <= i; j++)
+    {
+        Console.Write(j);
+    }
+    Console.WriteLine();
+}
+
+*/
+//Uppgift 12
+
+Console.WriteLine();
+
+for (int i = 1; i <= 9; i++)
+{
+    for (int k = 1; k <= i; k++)
+    {
+        for (int j = 1; j <= k; j++)
+        {
+
+            Console.Write(j);
+        }
+        Console.WriteLine();
+    }
+    Console.WriteLine();
 }
