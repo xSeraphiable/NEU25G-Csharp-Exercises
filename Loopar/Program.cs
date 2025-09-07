@@ -214,8 +214,9 @@ for (int i = 1; i <= 9; i++)
     Console.WriteLine();
 }
 
-*/
 //Uppgift 12
+
+using System.Collections.Specialized;
 
 Console.WriteLine();
 
@@ -231,4 +232,43 @@ for (int i = 1; i <= 9; i++)
         Console.WriteLine();
     }
     Console.WriteLine();
+}
+*/
+
+//Uppgift 13
+
+
+bool isPrime = false;
+int number = 1;
+
+for (int prints = 0; prints < 20;)
+{
+    int testcounter = 0;
+    int count = 0;
+
+    for (int i = 1; i < number; i++)
+    {
+        bool primeTest = false;
+
+        primeTest = number % i != 0;
+
+        if (primeTest)
+        {
+            testcounter++;
+        }
+
+        count++;
+    }
+
+    isPrime = testcounter == count-1;
+
+    int prime = number;
+    number++;
+
+    if (isPrime)
+    {
+        Console.WriteLine(prime);
+        prints++;
+    }
+    isPrime = false;
 }
