@@ -272,7 +272,7 @@ for (int prints = 0; prints < 20;)
 */
 
 //Uppgift 14 - Gissa talet
-
+/*
 Random rnd = new Random();
 int number = rnd.Next(1, 100); 
 int guess = 0;
@@ -300,3 +300,67 @@ while (guess != number)
         Console.WriteLine("Något gick fel. Försök igen.");
     }
 }
+*/
+
+// Uppgift 15 - sten sax påse
+
+
+string[] list = { "sten", "sax", "påse" };
+int playerWins = 0;
+int computerWins = 0;
+bool keepPlaying = true;
+
+while (keepPlaying)
+{
+    Console.WriteLine("\nSten, sax eller påse?");
+    string playerChoice = Console.ReadLine().ToLower();
+
+    if(playerChoice != list[0] && playerChoice != list[1] && playerChoice != list[2])
+    {
+        keepPlaying = false;
+        break;
+    }
+
+    Random rnd = new Random();
+    int computerRndChoice = rnd.Next(0, 2);
+
+    string computerChoice = list[computerRndChoice];
+    Console.WriteLine($"Datorn väljer:\n{computerChoice}");
+  
+    if (playerChoice == computerChoice)
+    {
+        Console.WriteLine("Oavgjort");
+    }  
+    else if (playerChoice == "sten" && computerChoice == "sax")
+    {
+        Console.WriteLine("Spelaren vinner.");
+        playerWins++;
+    }
+    else if (playerChoice == "sten" && computerChoice == "påse")
+    {
+        Console.WriteLine("Datorn vinner.");
+        computerWins++;
+    }
+    else if (playerChoice == "sax" && computerChoice == "sten")
+    {
+        Console.WriteLine("Datorn vinner.");
+        computerWins++;
+    }
+    else if (playerChoice == "sax" && computerChoice == "påse")
+    {
+        Console.WriteLine("Spelaren vinner.");
+        playerWins++;
+    }
+    else if (playerChoice == "påse" && computerChoice == "sten")
+    {
+        Console.WriteLine("Spelaren vinner.");
+        playerWins++;
+    }
+    else if (playerChoice == "påse" && computerChoice == "sax")
+    {
+        Console.WriteLine("Datorn vinner.");
+        computerWins++;
+    }
+}
+
+Console.WriteLine($"\nTack för att du spelade. Vinster: \nSpelare {playerWins} \nDator {computerWins}");
