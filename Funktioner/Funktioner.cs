@@ -94,17 +94,19 @@ Console.WriteLine(addedHyphen);
 Console.WriteLine();
 static string MyJoin(params string[] words)
 {
-    string[] result = new string[(words.Length+1)];
+    string[] result = new string[(words.Length*2-3)];
+    int countIndex = 1;
 
     for (int i = 0; i < (result.Length); i++)
     {
-        if (i % 2 == 0)
+        if (i % 2 != 0)
         {
             result[i] = words[0];
         }
         else
         {
-            result[i] = words[i+1];
+            result[i] = words[countIndex];
+            countIndex++;
         }
 
     }
@@ -118,5 +120,26 @@ static string MyJoin(params string[] words)
     return results;
 }
 
-string joinedText = (MyJoin("->", "Göteborg", "Sundsvall", "Stockholm"));
+string joinedText = (MyJoin("->", "Göteborg", "Sundsvall", "Stockholm", "Luleå", "Malmö", "Uppsala", "Halmstad"));
 Console.WriteLine(joinedText);
+
+
+//BÄTTRE LÖSNING AV UPPGIFT 6
+static string MyJoin2(string separator, params string[] words)
+{
+
+    string result = string.Empty;
+
+    result = words[0];
+
+    for (int i = 1; i < words.Length; i++)
+    {
+        result += separator + words[i];
+    }
+
+    return result;
+
+}
+
+string joinedText2 = (MyJoin2("->", "Göteborg", "Sundsvall", "Stockholm", "Luleå", "Malmö"));
+Console.WriteLine(joinedText2);
