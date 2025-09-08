@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Indexering", "Indexering\In
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Variables", "Variabler\Variables.csproj", "{9070FB2C-CB95-820C-6726-B04A6575B38F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Funktioner", "Funktioner\Funktioner.csproj", "{06E8F12E-C9B0-4931-9EE2-0E2FD4D83576}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{9070FB2C-CB95-820C-6726-B04A6575B38F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9070FB2C-CB95-820C-6726-B04A6575B38F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9070FB2C-CB95-820C-6726-B04A6575B38F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06E8F12E-C9B0-4931-9EE2-0E2FD4D83576}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06E8F12E-C9B0-4931-9EE2-0E2FD4D83576}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06E8F12E-C9B0-4931-9EE2-0E2FD4D83576}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06E8F12E-C9B0-4931-9EE2-0E2FD4D83576}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

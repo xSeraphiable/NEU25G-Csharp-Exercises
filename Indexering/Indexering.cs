@@ -36,7 +36,7 @@ for (int i = 0; i < input.Length; i++)
 Console.WriteLine();
 Console.WriteLine();
 
-// Uppgift 3 - Baklänges
+// Uppgift 3 - Baklänges FRÅGA *KAN JAG GÖRA DENNA UTAN ATT GÖRA EN CHAR?*
 
 Console.WriteLine("Skriv något:");
 string textrad = Console.ReadLine();
