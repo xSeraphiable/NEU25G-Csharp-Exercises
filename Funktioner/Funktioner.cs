@@ -143,3 +143,22 @@ static string MyJoin2(string separator, params string[] words)
 
 string joinedText2 = (MyJoin2("->", "Göteborg", "Sundsvall", "Stockholm", "Luleå", "Malmö"));
 Console.WriteLine(joinedText2);
+
+// Uppgift 7 - Beräkna medelvärde av int-array
+Console.WriteLine();
+static double medianValue(params int[] numbers)
+{
+   
+    int sum = 0;
+
+    for (int i = 0; i < numbers.Length; i++)
+    {
+        sum += numbers[i];
+    }
+
+    double median = sum / numbers.Length;
+
+    return median;
+}
+
+Console.WriteLine("Medianen blir: " + medianValue(1, 2, 5, 10, 6, 90, 135));
