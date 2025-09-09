@@ -187,3 +187,7 @@ foreach (var i in numbersInText)
     Console.Write(i+ " ");
 }
 
+
+// Uppgift 9 - Heltal till text
+
+static string IntegerToText (ushort)
