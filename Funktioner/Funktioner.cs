@@ -4,6 +4,7 @@
 //
 
 using System;
+using System.Diagnostics;
 using System.Diagnostics.Tracing;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -144,6 +145,7 @@ static string MyJoin2(string separator, params string[] words)
 string joinedText2 = (MyJoin2("->", "Göteborg", "Sundsvall", "Stockholm", "Luleå", "Malmö"));
 Console.WriteLine(joinedText2);
 
+
 // Uppgift 7 - Beräkna medelvärde av int-array
 Console.WriteLine();
 static double medianValue(params int[] numbers)
@@ -162,3 +164,26 @@ static double medianValue(params int[] numbers)
 }
 
 Console.WriteLine("Medianen blir: " + medianValue(1, 2, 5, 10, 6, 90, 135));
+
+// Uppgift 8 - Siffror till text
+Console.WriteLine();
+static string[] NumbersToWords(params int[] numbers)
+{
+    string[] numbersInWords = new string[numbers.Length];
+    string[] siffror = { "noll", "ett", "två", "tre", "fyra", "fem", "sex", "sju", "åtta", "nio" };
+
+    for (int i = 0; i < numbers.Length; i++)
+    {
+        numbersInWords[i] = siffror[numbers[i]];
+    }
+
+    return numbersInWords;
+}
+
+string[] numbersInText = (NumbersToWords(1, 2, 3, 4));
+
+foreach (var i in numbersInText)
+{
+    Console.Write(i+ " ");
+}
+
