@@ -169,15 +169,15 @@ Console.WriteLine("Medianen blir: " + medianValue(1, 2, 5, 10, 6, 90, 135));
 Console.WriteLine();
 static string[] NumbersToWords(params int[] numbers)
 {
-    string[] numbersInWords = new string[numbers.Length];
+    string[] numbersInText = new string[numbers.Length];
     string[] siffror = { "noll", "ett", "två", "tre", "fyra", "fem", "sex", "sju", "åtta", "nio" };
 
     for (int i = 0; i < numbers.Length; i++)
     {
-        numbersInWords[i] = siffror[numbers[i]];
+        numbersInText[i] = siffror[numbers[i]];
     }
 
-    return numbersInWords;
+    return numbersInText;
 }
 
 string[] numbersInText = (NumbersToWords(1, 2, 3, 4));
