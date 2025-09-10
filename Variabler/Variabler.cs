@@ -94,20 +94,20 @@ else
 
 //Uppgift 7, summa och medelvärde
 
-bool inputIsANumber = true;
+bool isInputNumber = true;
 
-int x = 0;
+int sum = 0;
 int count = 0;
 
-while (inputIsANumber)
+while (isInputNumber)
 {
-    Console.WriteLine("\nAnge ett tal:");
-    inputIsANumber = Int32.TryParse(Console.ReadLine(), out int number);
+    Console.Write("\nAnge ett tal:");
+    isInputNumber = Int32.TryParse(Console.ReadLine(), out int number);
 
-    x += number;
+    sum += number;
     count++;
 
-    Console.WriteLine($"Totalen är {x}");
+    Console.WriteLine($"Totalen är {sum}");
 }   
 
-Console.WriteLine($"Medelvärdet av angivna tal är {(double)x/count}");
+Console.WriteLine($"Medelvärdet av angivna tal är {(double)sum/count}");
