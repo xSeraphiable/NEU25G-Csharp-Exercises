@@ -47,12 +47,13 @@ for (int i = 0; i < uppgift3.Length; i++)
     }
     else
     {
-      
-         Console.Write("*");
-       
+
+        Console.Write("*");
+
     }
 
 }
+Console.WriteLine();
 
 // UPPGIFT 4 - gröna o, röda l
 
@@ -62,7 +63,7 @@ for (int i = 0; i < helloWorld.Length; i++)
 {
     if (helloWorld[i] == 'o')
     {
-       Console.ForegroundColor = ConsoleColor.Green;
+        Console.ForegroundColor = ConsoleColor.Green;
         Console.Write(helloWorld[i]);
         Console.ResetColor();
     }
@@ -76,6 +77,69 @@ for (int i = 0; i < helloWorld.Length; i++)
     {
         Console.Write(helloWorld[i]);
     }
+
+}
+Console.WriteLine();
+
+
+// UPPGIFT 5 - dubbla med grön färg
+
+for (int i = 0; i < helloWorld.Length; i++)
+{
+    if (i < helloWorld.Length - 1)
+    {
+        if (helloWorld[i] == helloWorld[i + 1])
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write(helloWorld[i]);
+            Console.Write(helloWorld[i + 1]);
+            Console.ResetColor();
+            i++;
+        }
+        else
+        {
+            Console.Write(helloWorld[i]);
+        }
+    }
+
+    else
+    {
+        Console.Write(helloWorld[i]);
+    }
+  
+
+}
+Console.WriteLine();
+
+// UPPGIFT 6 - Bokstav för bokstav - grön substring
+// OBS GÖR BÄTTRE... använd stringbuilder??
+
+string woodChuckString = "How much wood would a woodchuck chuck if a woodchuck could chuck wood?";
+string shortstring = "oo";
+
+for (int i = 0; i < woodChuckString.Length; i++)
+{
+    if (i < woodChuckString.Length - 1)
+    {
+        if (woodChuckString[i] == shortstring[0] && woodChuckString[i+1] == shortstring[1])
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write(woodChuckString[i]);
+            Console.Write(woodChuckString[i + 1]);
+            Console.ResetColor();
+            i++;
+        }
+        else
+        {
+            Console.Write(woodChuckString[i]);
+        }
+    }
+
+    else
+    {
+        Console.Write(woodChuckString[i]);
+    }
+
 
 }
 Console.WriteLine();
