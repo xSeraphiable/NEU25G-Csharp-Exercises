@@ -159,7 +159,7 @@ while (index < woodChuckString.Length)
         Console.Write(woodChuckString.Substring(index));
         break;
     }
-    
+
     Console.Write(woodChuckString.Substring(index, found - index));
 
     Console.ForegroundColor = ConsoleColor.Green;
@@ -210,7 +210,7 @@ for (int i = 0; i <= helloWorld.Length; i++)
 {
     for (int k = 0; k < i; k++)
     {
-        Console.Write(helloWorld[i-1]);
+        Console.Write(helloWorld[i - 1]);
     }
     Console.WriteLine();
 }
@@ -222,23 +222,30 @@ int count = 0;
 
 for (int i = 1; i <= woodChuckString.Length; i++)
 {
-    int k = 0;
-    for (int x = 0; x < i; x++)
+    if (woodChuckString.Length >= count)
     {
-        for ( k = 0; k < woodChuckString.Length; k++)
+        int k = 0;
+        for (int x = 0; x < i; x++)
         {
-            if (woodChuckString[k+count] == ' ')
+            for (k = 0; k < woodChuckString.Length; k++)
             {
-                break;
+                if ((k + count) >= woodChuckString.Length)
+                {
+                    break;
+                }
+                else if (woodChuckString[k + count] == ' ')
+                {
+                    break;
+                }
+                else
+                {
+                    Console.Write(woodChuckString[k + count]);
+                }
             }
-            else
-            {
-                Console.Write(woodChuckString[k+count]);
-            }
-            //Console.WriteLine();
+            Console.Write(" ");
         }
+        Console.WriteLine();
+        count = count + k + 1;
     }
-                Console.WriteLine();
-    count = count + k + 1;
 
 }
