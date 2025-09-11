@@ -200,8 +200,18 @@ while (j < woodChuckString.Length)
 }
 
 Console.WriteLine();
+Console.WriteLine();
 
 // Uppgift 9 - Bokstavspyramid
 // Utgå från strängen "Hello world!". Gör ett program som skriver ut första bokstaven en gång på första raden. 
 // Andra bokstaven 2 gånger på andra raden. Tredje 3 gånger på nästa rad osv. 
 
+for (int i = 0; i <= helloWorld.Length; i++)
+{
+    for (int k = 0; k < i; k++)
+    {
+        Console.Write(helloWorld[i-1]);
+    }
+    Console.WriteLine();
+}
+Console.WriteLine();
