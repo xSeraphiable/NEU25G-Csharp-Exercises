@@ -106,7 +106,7 @@ for (int i = 0; i < helloWorld.Length; i++)
     {
         Console.Write(helloWorld[i]);
     }
-  
+
 
 }
 Console.WriteLine();
@@ -121,7 +121,7 @@ for (int i = 0; i < woodChuckString.Length; i++)
 {
     if (i < woodChuckString.Length - 1)
     {
-        if (woodChuckString[i] == shortstring[0] && woodChuckString[i+1] == shortstring[1])
+        if (woodChuckString[i] == shortstring[0] && woodChuckString[i + 1] == shortstring[1])
         {
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write(woodChuckString[i]);
@@ -142,4 +142,34 @@ for (int i = 0; i < woodChuckString.Length; i++)
 
 
 }
+Console.WriteLine();
+
+// UPPGIFT 7 - grön substring 2
+// Samma som uppgift 6, men den mindre strängen är "chuck" istället för "oo". D.v.s. alla gånger "chuck" förekommer i den längre strängen skrivs dessa med grön text.
+
+string shortChuck = "chuck";
+
+int index = 0;
+
+while (index < woodChuckString.Length)
+{
+    int found = woodChuckString.IndexOf(shortChuck, index, StringComparison.CurrentCultureIgnoreCase);
+    if (found == -1)
+    {
+        Console.Write(woodChuckString.Substring(index));
+        break;
+    }
+    
+    Console.Write(woodChuckString.Substring(index, found - index));
+
+    Console.ForegroundColor = ConsoleColor.Green;
+    Console.Write(woodChuckString.Substring(found, shortChuck.Length));
+    Console.ResetColor();
+
+    index = found + shortChuck.Length;
+}
+
+
+
+
 Console.WriteLine();

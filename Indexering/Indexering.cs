@@ -13,7 +13,7 @@ for (int i = 0; i < lista.Length; i++)
 
 using System.Xml;
 
-string[] siffror =  {"noll", "ett", "två", "tre", "fyra", "fem", "sex", "sju", "åtta", "nio"};
+string[] siffror = { "noll", "ett", "två", "tre", "fyra", "fem", "sex", "sju", "åtta", "nio" };
 
 Console.WriteLine("Skriv ett valfritt antal siffror:");
 string sifferinmatning = Console.ReadLine();
@@ -43,8 +43,8 @@ string textrad = Console.ReadLine();
 
 var letters = textrad.ToCharArray(); // den inmatade texten görs om till en array av typen char
 
-for (int i = letters.Length-1;  i >= 0; i--) // loopen kommer köras lika många gånger som arrayen har bokstäver.
-                                             // letters.Length = antal bokstäver i arrayen, måste ta -1 eftersom index börjar på 0.
+for (int i = letters.Length - 1; i >= 0; i--) // loopen kommer köras lika många gånger som arrayen har bokstäver.
+                                              // letters.Length = antal bokstäver i arrayen, måste ta -1 eftersom index börjar på 0.
 {
     Console.Write(letters[i]); // använder Console.Write för att ingen radbrytning ska göras. All text hamnar på samma rad.
 }
@@ -64,7 +64,7 @@ for (int i = 0; i < sentence.Length; i++)
 {
     foreach (char vokal in vokaler)
     {
-        if (vokal==myLetters[i])
+        if (vokal == myLetters[i])
         {
             myLetters[i] = '*';
         }
@@ -77,3 +77,52 @@ foreach (char letter in myLetters)
 {
     Console.Write(letter);
 }
+
+
+// Uppgift 8 - Fördröjd utskrift
+// SKapa ett program som ber användaren skriva in ett ord. Sedan ett till och ett till...
+// TIPS: man kan använda modulus 10 istället för att skriva 
+
+string[] words = new string[10];
+int count = 0;
+
+
+while (true)
+{
+    for (int i = 0; i < 10; i++)
+    {
+        Console.Write("Skriv ett ord: ");
+        words[i] = Console.ReadLine();
+        
+        if (count < 10)
+        {
+            Console.WriteLine("Du har inte skrivit 10 ord än");
+            count++;
+            continue;
+        }
+        if ( i == 9)
+        {
+            Console.WriteLine(words[0]);
+        }
+        else
+        {
+            Console.WriteLine(words[i + 1]);
+        }
+        count++;
+    }
+
+
+}
+
+
+string[] words2 = new string[10];
+int count2 = 0;
+
+while (true)
+{
+    Console.WriteLine("Skriv något: ");
+    string input2 = Console.ReadLine();
+    words[count % 10] = input2;
+
+}
+

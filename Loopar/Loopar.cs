@@ -237,7 +237,7 @@ for (int i = 1; i <= 9; i++)
 
 //Uppgift 13 - Primtal
 
-/*
+
 bool isPrime = false;
 int number = 1;
 
@@ -269,7 +269,7 @@ for (int prints = 0; prints < 20;) //kör koden tills 20 tal har skrivits ut
     number++; //numret ökas med ett och loopen börjar om med beräkning av nästa tal
     isPrime = false; //reset av isPrime-bool
 }
-*/
+
 
 //Uppgift 14 - Gissa talet
 /*
