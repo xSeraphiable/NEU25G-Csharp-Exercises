@@ -169,7 +169,39 @@ while (index < woodChuckString.Length)
     index = found + shortChuck.Length;
 }
 
+Console.WriteLine();
 
 
+// UPPGIFT 8 - Bokstav för bokstav - grön substring 3
+// Samma som uppgift 6 igen, men denna gången kan användaren mata in den kortare strängen, alltså valfri text som ska sökas (färgas grön) i den längre texten.
+
+
+Console.WriteLine("Skriv in den text som ska bli grön:");
+string convertToGreen = Console.ReadLine();
+
+int j = 0;
+
+while (j < woodChuckString.Length)
+{
+    int found = woodChuckString.IndexOf(convertToGreen, j, StringComparison.CurrentCultureIgnoreCase);
+    if (found == -1)
+    {
+        Console.Write(woodChuckString.Substring(j));
+        break;
+    }
+
+    Console.Write(woodChuckString.Substring(j, found - j));
+
+    Console.ForegroundColor = ConsoleColor.Green;
+    Console.Write(woodChuckString.Substring(found, convertToGreen.Length));
+    Console.ResetColor();
+
+    j = found + convertToGreen.Length;
+}
 
 Console.WriteLine();
+
+// Uppgift 9 - Bokstavspyramid
+// Utgå från strängen "Hello world!". Gör ett program som skriver ut första bokstaven en gång på första raden. 
+// Andra bokstaven 2 gånger på andra raden. Tredje 3 gånger på nästa rad osv. 
+
