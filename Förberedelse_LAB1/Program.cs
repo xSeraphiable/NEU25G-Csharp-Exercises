@@ -215,3 +215,30 @@ for (int i = 0; i <= helloWorld.Length; i++)
     Console.WriteLine();
 }
 Console.WriteLine();
+
+// Uppgift 10 - Ordpyramid
+
+int count = 0;
+
+for (int i = 1; i <= woodChuckString.Length; i++)
+{
+    int k = 0;
+    for (int x = 0; x < i; x++)
+    {
+        for ( k = 0; k < woodChuckString.Length; k++)
+        {
+            if (woodChuckString[k+count] == ' ')
+            {
+                break;
+            }
+            else
+            {
+                Console.Write(woodChuckString[k+count]);
+            }
+            //Console.WriteLine();
+        }
+    }
+                Console.WriteLine();
+    count = count + k + 1;
+
+}
