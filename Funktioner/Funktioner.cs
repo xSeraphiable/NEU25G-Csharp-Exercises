@@ -190,4 +190,3 @@ foreach (var i in numbersInText)
 
 // Uppgift 9 - Heltal till text
 
-static string IntegerToText (ushort)
