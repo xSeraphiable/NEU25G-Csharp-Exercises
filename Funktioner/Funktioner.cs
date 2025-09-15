@@ -95,7 +95,7 @@ Console.WriteLine(addedHyphen);
 Console.WriteLine();
 static string MyJoin(params string[] words)
 {
-    string[] result = new string[(words.Length*2-3)];
+    string[] result = new string[(words.Length * 2 - 3)];
     int countIndex = 1;
 
     for (int i = 0; i < (result.Length); i++)
@@ -150,7 +150,7 @@ Console.WriteLine(joinedText2);
 Console.WriteLine();
 static double medianValue(params int[] numbers)
 {
-   
+
     int sum = 0;
 
     for (int i = 0; i < numbers.Length; i++)
@@ -184,9 +184,29 @@ string[] numbersInText = (NumbersToWords(1, 2, 3, 4));
 
 foreach (var i in numbersInText)
 {
-    Console.Write(i+ " ");
+    Console.Write(i + " ");
 }
 
 
 // Uppgift 9 - Heltal till text
 
+Console.Write("Ange ett tal: ");
+ushort input = ushort.Parse(Console.ReadLine());
+
+Console.WriteLine(IntegerToText(input));
+
+
+static string IntegerToText(ushort input)
+{
+    string writtenInteger;
+    string[] ones = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen" };
+    string[] tens = {"twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"};
+
+    int restSum;
+
+    int checksum = (input / 1000);
+
+    
+
+    return writtenInteger;
+}
