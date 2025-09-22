@@ -6,6 +6,7 @@
 using System;
 using System.Diagnostics;
 using System.Diagnostics.Tracing;
+using System.Security.Cryptography;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 static void PrintName(string firstName, string lastName)
@@ -189,7 +190,7 @@ foreach (var i in numbersInText)
 
 
 // Uppgift 9 - Heltal till text
-
+Console.WriteLine();
 Console.Write("Ange ett tal: ");
 ushort input = ushort.Parse(Console.ReadLine());
 
@@ -198,15 +199,46 @@ Console.WriteLine(IntegerToText(input));
 
 static string IntegerToText(ushort input)
 {
-    string writtenInteger;
-    string[] ones = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen" };
-    string[] tens = {"twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"};
+    string writtenInteger = "";
+    string[] ones = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen" };
+    string[] tens = { "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety" };
 
-    int restSum;
+   
 
     int checksum = (input / 1000);
+    int restsum = input % 1000;
 
+    if (checksum > 19)
+    {
+
+    }
+    else if (checksum > 0)
+    { writtenInteger += ones[checksum] + " thousand"; }
+   
+    checksum = (restsum / 100);
+    restsum = restsum % 100;
+    if (checksum > 0) 
+    { writtenInteger += " " + ones[checksum] + " hundred"; }
     
+    checksum = restsum / 10;
+    restsum = restsum % 10;
+    if (checksum > 1)
+    { writtenInteger += " " + tens[checksum-2]; }
+    else if (checksum > 0)
+    {
+        writtenInteger += " " + ones[checksum + 10];
+    }
+
+    if (restsum > 19)
+    {
+        writtenInteger += " " + ones[restsum];
+    }
+
+  
+
+
+
+
 
     return writtenInteger;
 }
