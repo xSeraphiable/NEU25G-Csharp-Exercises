@@ -258,3 +258,4 @@ static string IntegerToText(ushort input)
 // Skriv en loop som printar ut rektanglar med random storlek och position på skärmen.
 
 
+
