@@ -242,3 +242,19 @@ static string IntegerToText(ushort input)
 
     return writtenInteger;
 }
+
+// 12 - Rita en box
+// Skriv en funktion DrawBox(int width, int height). När man anropar funktionen ska den skriva ut
+// en rektangel där de yttre tecknen består av ‘#’ och de inre av ‘-’.
+
+// Exempel: DrawBox(7, 4);
+
+// #######
+// #-----#
+// #-----#
+// #######
+
+// Extrauppgift: Uppdatera funktionen och lägg till parametrar left och top (för positionen på översta vänstra hörnet av boxen.
+// Skriv en loop som printar ut rektanglar med random storlek och position på skärmen.
+
+
