@@ -37,7 +37,6 @@ else
 }
 
 
-
 // === Uppgifter ===
 
 class Uppgift1
@@ -423,7 +422,7 @@ class Uppgift13
     public static void Run()
     {
         Console.WriteLine("\nUppgift 13 - Flytta runt ett @ med piltangenterna.\n");
-        //
+        Console.Title = "Ame's Box Game";
         //Låt oss skriva början till ett enkelt spel:
 
         //Använd DrawBox-funktionen i föregående uppgift för att rita en box på skärmen. Placera sedan ett @ i mitten av boxen.
@@ -435,20 +434,94 @@ class Uppgift13
 
         //Tips: Kolla upp Console.ReadKey(); och Console.KeyAvailable;
 
-        Console.Write("Ange bredd i heltal: ");
-        int width = Int32.Parse(Console.ReadLine());
-        Console.WriteLine();
-        Console.Write("Ange höjd i heltal: ");
-        int height = Int32.Parse(Console.ReadLine());
-        Console.WriteLine();
+        // TODO: detta dyker upp i en att-göra-lista. Se i View->Task List
+
+
+        int width = GetDimension("Ange bredd i heltal: ");
+        int height = GetDimension("Ange höjd i heltal: ");
 
         DrawBox(width, height);
 
         int x = width / 2;
         int y = height / 2;
 
+        Console.SetCursorPosition(x, y);
+        Console.Write("@");
+        Console.CursorVisible = false;
+
+        while (true)
+        {
+            int oldx = x;
+            int oldy = y;
+
+
+            Thread.Sleep(20);
+            if (Console.KeyAvailable)
+            {
+
+                var key = Console.ReadKey(true);
+                if (key.Key == ConsoleKey.UpArrow)
+                {
+                    y--;
+                }
+                else if (key.Key == ConsoleKey.DownArrow)
+                {
+                    y++;
+                }
+                else if (key.Key == ConsoleKey.RightArrow)
+                {
+                    x++;
+                }
+                else if (key.Key == ConsoleKey.LeftArrow)
+                {
+                    x--;
+                }
+                else if (key.Key == ConsoleKey.Escape)
+                {
+                    Console.SetCursorPosition(0, height);
+                    Console.WriteLine("\nSpelet avslutas");
+                    break;
+                }
+
+                
+                x = IsCursorInsideBox(x, width);
+                y = IsCursorInsideBox(y, height);
+
+
+                Console.SetCursorPosition(oldx, oldy);
+                Console.Write('-');
+                Console.SetCursorPosition(x, y);
+                Console.Write('@');
+
+            }
+
+        }
+
+        static int GetDimension(string prompt)
+        {
+            Console.Write(prompt);
+            int.TryParse(Console.ReadLine(), out int z);
+            return z;
+        }
+
+        static int IsCursorInsideBox(int z, int dimension)
+        {
+            if (z == 0)
+            {
+                return 1;
+            }
+            else if (z >= dimension - 1)
+            {
+                return dimension - 2;
+            }
+            else return z;
+        }
+
         static void DrawBox(int width, int height)
         {
+
+            Console.Clear();
+
             for (int i = 0; i < width; i++)
             {
                 Console.Write("#");
@@ -487,8 +560,7 @@ class Uppgift13
 }
 
 
-    }
-}
+
 
 
 
